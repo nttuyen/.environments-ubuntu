@@ -23,6 +23,9 @@ setup_iptables() {
 	# Accept all HTTP
 	iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 
+	# MYSQL
+	iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
+
 	# Default rules
 	# DROP all input, forward and accept all output
 	iptables -P INPUT DROP

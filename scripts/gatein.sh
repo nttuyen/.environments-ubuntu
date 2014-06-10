@@ -4,7 +4,7 @@ if [ "$ENVIRONMENT_DIR" == "" ] ; then
   ENVIRONMENT_SCRIPT_DIR=$ENVIRONMENT_DIR/scripts
 fi
  
-GATEIN3_HOME=/home/tuyennt/projects/gatein/gatein3
+GATEIN3_HOME=$HOME/java/projects/gatein/gatein3
  
  
 gtn_cd() {
