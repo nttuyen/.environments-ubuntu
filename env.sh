@@ -23,3 +23,10 @@ fi
 if [ -f "$ENVIRONMENT_DIR/scripts/gatein.sh" ] ; then
   . $ENVIRONMENT_DIR/scripts/gatein.sh
 fi
+
+if [ -f "$ENVIRONMENT_DIR/scripts/scala.sh" ] ; then
+	. $ENVIRONMENT_DIR/scripts/scala.sh
+	setup_scala
+fi
+
+
