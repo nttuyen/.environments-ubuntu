@@ -29,4 +29,9 @@ if [ -f "$ENVIRONMENT_DIR/scripts/scala.sh" ] ; then
 	setup_scala
 fi
 
+if [ -f "$ENVIRONMENT_DIR/scripts/gradle.sh" ] ; then
+	. $ENVIRONMENT_DIR/scripts/gradle.sh
+	setup_gradle
+fi
+
 
