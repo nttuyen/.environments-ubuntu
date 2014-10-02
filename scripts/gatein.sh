@@ -4,31 +4,47 @@ if [ "$ENVIRONMENT_DIR" == "" ] ; then
   ENVIRONMENT_SCRIPT_DIR=$ENVIRONMENT_DIR/scripts
 fi
 
+export GATEIN_DEFAULT_HOME=$HOME/java/projects/gatein/gatein/master
+export GATEIN_35_HOME=$HOME/java/projects/gatein/gatein/3.5
+export GATEIN_36_HOME=$HOME/java/projects/gatein/gatein/3.6
+export GATEIN_37_HOME=$HOME/java/projects/gatein/gatein/3.7
+export GATEIN_EXO_35_HOME=$HOME/java/projects/gatein/gatein/exogtn_3.5
+export GATEIN_EXO_37_HOME=$HOME/java/projects/gatein/gatein/exogtn_3.7
 
-GATEIN_HOME=$HOME/java/projects/gatein/gatein3
-GATEIN_VERSION=3
+#export GATEIN_HOME=GATEIN_DEFAULT_HOME
+#export GATEIN_VERSION=3
 
 gtn_switch_version() {
 	case $1 in 
 	  3.5)
-	    GATEIN_HOME=$HOME/java/project/gatein/gatein/3.5
+	    GATEIN_HOME=$GATEIN_35_HOME
 	    GATEIN_VERSION=3
 	    ;;
 	  3.6)
-	    GATEIN_HOME=$HOME/java/project/gatein/gatein/3.5
+	    GATEIN_HOME=$GATEIN_36_HOME
 	    GATEIN_VERSION=3
 	    ;;
 	  3.7)
-	    GATEIN_HOME=$HOME/java/project/gatein/gatein/3.5
+	    GATEIN_HOME=$GATEIN_37_HOME
 	    GATEIN_VERSION=3
 	    ;;
-	  master)
+	  exogtn35)
+	    GATEIN_HOME=$GATEIN_EXO_35_HOME
+	    GATEIN_VERSION=3
+	    ;;
+	  exogtn35)
+	    GATEIN_HOME=$GATEIN_EXO_37_HOME
+	    GATEIN_VERSION=3
+	    ;;
+	  #master)
 	  *)
-	    GATEIN_HOME=$HOME/java/project/gatein/gatein/master
+	    GATEIN_HOME=$GATEIN_DEFAULT_HOME
 	    GATEIN_VERSION=3
 	    ;;
 	esac
 	
+	echo "GATEIN_HOME=$GATEIN_HOME"
+	echo "GATEIN_VERSION=$GATEIN_VERSION"
 	export GATEIN_HOME
 	export GATEIN_VERSION
 }
@@ -48,15 +64,17 @@ gtn_cd() {
         ;;
     esac
   else
-    tomcat)
-          echo "This command is not support for gatein version $GATEIN_VERSION"
+    case $1 in
+      tomcat)
+          echo "This command is not supported in gatein version $GATEIN_VERSION"
         ;;
       jboss)
-          echo "This command is not support for gatein version $GATEIN_VERSION"
+          echo "This command is not supported in gatein version $GATEIN_VERSION"
         ;;
       *)
           cd $GATEIN_HOME
         ;;
+    esac
   fi
 }
  
@@ -69,11 +87,15 @@ gtn() {
         gtn_switch_version $2
       ;;
     *)
-        if[ -f "$ENVIRONMENT_SCRIPT_DIR/gatein_$GATEIN_VERSION.sh" ]; then
-          $ENVIRONMENT_SCRIPT_DIR/gatein_$GATEIN_VERSION.sh $@
+        if [ -f "$ENVIRONMENT_SCRIPT_DIR/gatein$GATEIN_VERSION.sh" ] ; then
+          echo "$ENVIRONMENT_SCRIPT_DIR/gatein$GATEIN_VERSION.sh"
+          $ENVIRONMENT_SCRIPT_DIR/gatein$GATEIN_VERSION.sh $@
         else
           echo "Script file for gatein version $GATEIN_VERSION is not found"
         fi
       ;;
   esac
 }
+
+gtn switch
+
