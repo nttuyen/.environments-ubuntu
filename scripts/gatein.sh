@@ -4,12 +4,12 @@ if [ "$ENVIRONMENT_DIR" == "" ] ; then
   ENVIRONMENT_SCRIPT_DIR=$ENVIRONMENT_DIR/scripts
 fi
 
-export GATEIN_DEFAULT_HOME=$HOME/java/projects/gatein/gatein/master
-export GATEIN_35_HOME=$HOME/java/projects/gatein/gatein/3.5
-export GATEIN_36_HOME=$HOME/java/projects/gatein/gatein/3.6
-export GATEIN_37_HOME=$HOME/java/projects/gatein/gatein/3.7
-export GATEIN_EXO_35_HOME=$HOME/java/projects/gatein/gatein/exogtn_3.5
-export GATEIN_EXO_37_HOME=$HOME/java/projects/gatein/gatein/exogtn_3.7
+export GATEIN_DEFAULT_HOME=$HOME/projects/exo/gatein/gatein-portal/master
+export GATEIN_35_HOME=$HOME/projects/exo/gatein/gatein-portal/3.5
+export GATEIN_36_HOME=$HOME/projects/exo/gatein/gatein-portal/3.6
+export GATEIN_37_HOME=$HOME/projects/exo/gatein/gatein-portal/3.7
+export GATEIN_EXO_35_HOME=$HOME/projects/exo/gatein/exogtn/3.5
+export GATEIN_EXO_37_HOME=$HOME/projects/exo/gatein/exogtn/3.7
 
 #export GATEIN_HOME=GATEIN_DEFAULT_HOME
 #export GATEIN_VERSION=3

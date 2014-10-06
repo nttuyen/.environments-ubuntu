@@ -3,7 +3,7 @@
  
 #DEFINE
 if [ "$GATEIN_HOME" == "" ] ; then
-  GATEIN_HOME=$HOME/java/projects/gatein/gatein3
+  GATEIN_HOME=$GATEIN_DEFAULT_HOME
 fi
 cd $GATEIN_HOME;
  
