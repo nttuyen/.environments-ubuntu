@@ -34,4 +34,6 @@ if [ -f "$ENVIRONMENT_DIR/scripts/gradle.sh" ] ; then
 	setup_gradle
 fi
 
-
+if [ -f "$ENVIRONMENT_DIR/scripts/android.sh" ] ; then
+	. $ENVIRONMENT_DIR/scripts/android.sh
+fi
