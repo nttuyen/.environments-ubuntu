@@ -5,3 +5,4 @@ maven3
 scala-*
 gradle-*
 android_sdk
+envs/*

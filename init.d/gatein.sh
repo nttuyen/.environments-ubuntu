@@ -43,8 +43,8 @@ gtn_switch_version() {
 	    ;;
 	esac
 	
-	echo "GATEIN_HOME=$GATEIN_HOME"
-	echo "GATEIN_VERSION=$GATEIN_VERSION"
+	#echo "GATEIN_HOME=$GATEIN_HOME"
+	#echo "GATEIN_VERSION=$GATEIN_VERSION"
 	export GATEIN_HOME
 	export GATEIN_VERSION
 }

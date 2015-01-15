@@ -39,6 +39,6 @@ function setup_gradle() {
   export GRADLE_HOME
   export PATH=$GRADLE_HOME/bin:$PATH
  
-  echo "Current GRADLE_HOME: $GRADLE_HOME"
+  #echo "Current GRADLE_HOME: $GRADLE_HOME"
   return 1
 }

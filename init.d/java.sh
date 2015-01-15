@@ -40,6 +40,6 @@ function setup_jdk() {
   export JAVA_HOME
   export PATH=$JAVA_HOME/bin:$PATH
  
-  echo "Current JAVA_HOME: $JAVA_HOME"
+  #echo "Current JAVA_HOME: $JAVA_HOME"
   return 1
 }

@@ -41,7 +41,7 @@ setup_maven() {
   export MAVEN_HOME
   export PATH=$MAVEN_HOME/bin:$PATH
  
-  echo "Current MAVEN_HOME: $MAVEN_HOME"
+  #echo "Current MAVEN_HOME: $MAVEN_HOME"
   return 1
 }
 
