@@ -85,7 +85,7 @@ run(){
       if [ "$LAST_LINE" != "#APPEND_OK" ]; then
         echo "JAVA_OPTS=\"\$JAVA_OPTS -Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms1536m -Xmx1536m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:+DisableExplicitGC\"" >> $GATEIN_SERVER_DIR/bin/standalone.conf
     		echo "JAVA_OPTS=\"\$JAVA_OPTS -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n\"" >> $GATEIN_SERVER_DIR/bin/standalone.conf
-				echo "JAVA_OPTS=\"\$JAVA_OPTS -javaagent:/home/tuyennt/java/jrebel/jrebel.jar -Drebel.remoting_plugin=true \"" >> $GATEIN_SERVER_DIR/bin/standalone.conf
+				echo "JAVA_OPTS=\"\$JAVA_OPTS -javaagent:/home/tuyennt/java/environments/jrebel/jrebel.jar -Drebel.remoting_plugin=true \"" >> $GATEIN_SERVER_DIR/bin/standalone.conf
     		echo "#APPEND_OK" >> $GATEIN_SERVER_DIR/bin/standalone.conf
       fi
       
@@ -103,7 +103,7 @@ run(){
       JPDA_ADDRESS=8000
       REMOTE_DEBUG="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n"
       JMX_AGENT="-Dcom.sun.management.jmxremote"
-      GATEIN_OPTS="-javaagent:/home/tuyennt/java/jrebel/jrebel.jar -Drebel.remoting_plugin=true"
+      GATEIN_OPTS="-javaagent:/home/tuyennt/java/environments/jrebel/jrebel.jar -Drebel.remoting_plugin=true"
       
       while getopts "D:" OPTION
       do
