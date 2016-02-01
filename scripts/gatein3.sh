@@ -8,9 +8,9 @@ fi
 cd $GATEIN_HOME;
  
 #maven build profile
-GATEIN_MAVEN_SERVER_PROFILE_TOMCAT="-Dservers.dir=/home/tuyennt/java/servers -Dgatein.dev=tomcat7 -Ddownload"
-GATEIN_MAVEN_SERVER_PROFILE_JBOSS="-Dservers.dir=/home/tuyennt/java/servers -Dgatein.dev=jbossas711 -Ddownload"
-GATEIN_MAVEN_SERVER_PROFILE_JBOSS_EAP="-Dservers.dir=/home/tuyennt/java/servers -Dgatein.dev=jbosseap6 -Dserver.name=jboss-eap-6.0 -Ddownload"
+GATEIN_MAVEN_SERVER_PROFILE_TOMCAT="-Dservers.dir=~/java/exo-dependencies -Dgatein.dev=tomcat7 -Ddownload"
+GATEIN_MAVEN_SERVER_PROFILE_JBOSS="-Dservers.dir=~/java/exo-dependencies -Dgatein.dev=jbossas711 -Ddownload"
+GATEIN_MAVEN_SERVER_PROFILE_JBOSS_EAP="-Dservers.dir=~/java/exo-dependencies -Dgatein.dev=jbosseap6 -Dserver.name=jboss-eap-6.0 -Ddownload"
  
 #Server dir
 GATEIN_EXECUTE_TOMCAT_DIR=$GATEIN_HOME/packaging/tomcat/tomcat7/target/tomcat
